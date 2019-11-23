@@ -1,8 +1,8 @@
 <app-header [title]="title"></app-header>
 
 <main>
-  <app-control-panel></app-control-panel>
-  <app-file></app-file>
+  <app-control-panel (boldpressed)="onBoldPressed($event)"></app-control-panel>
+  <app-file (selectword)="onSelectWord($event)" [bold]="boldword"></app-file>
 </main>
 
 <app-footer></app-footer>

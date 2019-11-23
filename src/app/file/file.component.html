@@ -1,3 +1,13 @@
+<div [hidden]="true" [innerHtml]="text$ | async" class="file"></div>
+
 <div class="file">
-  {{text$ | async}}
+  <app-word
+    *ngFor="let w of words; let i = index"
+    [text]="w"
+    [index]="i"
+    (dbclick)="onSelected(i)"
+    (mousedown)="onSelected(i)"
+    [boldnumber]="bold"
+  >
+  </app-word>
 </div>
