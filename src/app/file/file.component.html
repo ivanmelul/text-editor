@@ -1,3 +1,28 @@
-<div class="file">
-  {{text$ | async}}
+<div class="panel">
+  <div class="format-actions">
+    <button class="format-action" type="button" (click)="bold()">
+      <b>B</b>
+    </button>
+    <button class="format-action" type="button" (click)="italic()">
+      <i>I</i>
+    </button>
+    <button class="format-action" type="button" (click)="underline()">
+      <u>U</u>
+    </button>
+  </div>
+</div>
+
+<div class="file-content">
+  <div [hidden]="true" class="file">
+    {{ text$ | async }}
+  </div>
+
+  <div class="file">
+    <app-word
+      *ngFor="let w of words; let i = index"
+      [w]="w"
+      [i]="i"
+      (click)="onSelected(i)"
+    ></app-word>
+  </div>
 </div>

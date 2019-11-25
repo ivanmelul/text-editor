@@ -1,4 +1,4 @@
-:host {
+.file-content {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -12,4 +12,34 @@
   background-color: #fff;
   border: 1px solid #e4dede;
   padding: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.panel {
+  background-color: #fff;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5px;
+}
+
+.format-actions {
+  width: 200px;
+  margin-right: 400px;
+}
+
+button + button {
+  margin-left: 5px;
 }
