@@ -28,7 +28,7 @@
 
 .panel {
   background-color: #fff;
-  height: 25px;
+  height: 40px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -42,4 +42,19 @@
 
 button + button {
   margin-left: 5px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Style the active class (and buttons on mouse-over) */
+.active,
+.btn:hover {
+  background-color: #666;
+  color: white;
 }

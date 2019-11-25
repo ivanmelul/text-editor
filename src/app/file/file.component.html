@@ -1,12 +1,27 @@
 <div class="panel">
-  <div class="format-actions">
-    <button class="format-action" type="button" (click)="bold()">
+  <div class="btn-group">
+    <button
+      class="btn"
+      type="button"
+      (click)="bold()"
+      [ngClass]="{ active: boldpressed }"
+    >
       <b>B</b>
     </button>
-    <button class="format-action" type="button" (click)="italic()">
+    <button
+      class="btn"
+      type="button"
+      (click)="italic()"
+      [ngClass]="{ active: italicpressed }"
+    >
       <i>I</i>
     </button>
-    <button class="format-action" type="button" (click)="underline()">
+    <button
+      class="btn"
+      type="button"
+      (click)="underline()"
+      [ngClass]="{ active: underlinepressed }"
+    >
       <u>U</u>
     </button>
   </div>
@@ -23,6 +38,7 @@
       [w]="w"
       [i]="i"
       (click)="onSelected(i)"
+      id="word-{{ i }}"
     ></app-word>
   </div>
 </div>

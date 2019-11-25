@@ -31,19 +31,21 @@ export class WordComponent implements OnInit {
   ngOnInit() {
     this.subscriptionBold = this.navbarService.notifyBoldObservable$.subscribe(
       wordSelected => {
-        if (this.i == wordSelected) this.isbold = !this.isbold;
+        if (this.i.toString() == wordSelected.id) this.isbold = !this.isbold;
       }
     );
 
     this.subscriptionItalic = this.navbarService.notifyItalicIObservable$.subscribe(
       wordSelected => {
-        if (this.i == wordSelected) this.isitalic = !this.isitalic;
+        if (this.i.toString() == wordSelected.id)
+          this.isitalic = !this.isitalic;
       }
     );
 
     this.subscriptionUnderline = this.navbarService.notifyUnderlineObservable$.subscribe(
       wordSelected => {
-        if (this.i == wordSelected) this.isunderline = !this.isunderline;
+        if (this.i.toString() == wordSelected.id)
+          this.isunderline = !this.isunderline;
       }
     );
   }
